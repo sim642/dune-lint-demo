@@ -1,5 +1,5 @@
 let detect_static_add = object
-  inherit Ppxlib.Ast_traverse.map as super
+  inherit Ppxlib.Ast_traverse.iter as super
 
   method! expression e =
     match e with
@@ -20,7 +20,7 @@ let detect_static_add = object
 end
 
 let impl s =
-  detect_static_add#structure s
+  detect_static_add#structure s; s
 
 let () =
   Ppxlib.Driver.register_transformation
