@@ -1,4 +1,4 @@
 (library
- (name correct_static_add)
+ (name linter)
  (kind ppx_rewriter)
  (libraries ppxlib))
