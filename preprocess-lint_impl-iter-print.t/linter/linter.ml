@@ -15,7 +15,7 @@ let detect_static_add = object
       } ->
       let sum = int_of_string a + int_of_string b in
       let repl = string_of_int sum in
-      Format.eprintf "%a %s" Ppxlib.Location.print loc repl
+      Format.eprintf "%a %s\n" Ppxlib.Location.print loc repl
     | _ -> super#expression e
 end
 

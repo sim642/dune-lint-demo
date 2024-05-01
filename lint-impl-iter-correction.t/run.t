@@ -10,10 +10,11 @@ Must build @lint alias to run them.
   _build/default/src/add.ml.lint-corrected differ.
   [1]
 
-Corrections can then be promoted.
+Multiple corrections can then be promoted.
 
   $ dune promote
   Promoting _build/default/src/add.ml.lint-corrected to src/add.ml.
 
   $ cat src/add.ml
   let () = Printf.printf "%d\n" @@ 3
+  let () = Printf.printf "%d\n" @@ 7

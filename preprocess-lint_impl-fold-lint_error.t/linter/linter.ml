@@ -20,7 +20,7 @@ let detect_static_add = object
 end
 
 let lint_impl s =
-  detect_static_add#structure s []
+  List.rev (detect_static_add#structure s [])
 
 let () =
   Ppxlib.Driver.register_transformation
