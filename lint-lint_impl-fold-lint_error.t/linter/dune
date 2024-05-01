@@ -1,0 +1,4 @@
+(library
+ (name linter)
+ (kind ppx_rewriter)
+ (libraries ppxlib))
